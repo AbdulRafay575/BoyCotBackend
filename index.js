@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/products', require('./routes/products'));
-app.use('/api/userproducts', require('./routes/userproducts'));
+app.use('/api/userproducts', require('./routes/userProducts'));
 app.use('/api/admin', require('./routes/admin')); 
 
 app.get('/', (req, res) => {
