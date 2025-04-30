@@ -18,6 +18,10 @@ const UserProductSchema = new Schema({
     type: Map, // This allows flexibility (type and url or any extra fields)
     of: String
   },
+  proof: {
+    type: String, // URL to the proof
+    required: false // optional, can be made required if needed
+  },
   categories: [
     {
       id: String,
