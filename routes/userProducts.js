@@ -16,9 +16,10 @@ router.get('/', async (req, res) => {
 // Submit new product (user)
 router.post('/', async (req, res) => {
   try {
-    const product = new UserProduct(req.body);
-    await product.save();
-    res.status(201).json(product);
+    console.log('Received body:', req.body); // 👀   
+    const userkaproduct = new UserProduct(req.body);
+    await userkaproduct.save();
+    res.status(201).json(userkaproduct);
   } catch (err) {
     res.status(400).json({ error: 'Invalid data' });
   }
