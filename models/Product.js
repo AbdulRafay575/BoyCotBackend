@@ -7,15 +7,14 @@ const ProductSchema = new Schema({
     required: true
   },
   description: String,
-  type: String, // e.g. "supports-israel"
+  type: String, 
   website: String,
   logo: {
-    type: Map, // This allows flexibility (type and url or any extra fields)
-    of: String
+    type: Object
   },
   proof: {
-    type: String, // URL to the proof
-    required: false // optional, can be made required if needed
+    type: String, 
+    required: false // optional
   },
   categories: [
     {
@@ -31,8 +30,7 @@ const ProductSchema = new Schema({
       description: String,
       website: String,
       logo: {
-        type: Map,
-        of: String
+        type: Object
       }
     }
   ]
